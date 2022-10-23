@@ -15,6 +15,7 @@ export const Navbar = () => {
         <Items name='About Us'/>
         <Items name='Gallery'/>
         <Items name='Contact'/>
+        
         </ul>
 
         <ul>
