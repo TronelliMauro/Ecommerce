@@ -1,0 +1,10 @@
+
+Nombre de la empresa:
+-Edites
+
+Categorias Clickeables:
+-Home
+-Produts
+-About Us
+-Gallery
+-Contact

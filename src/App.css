@@ -9,9 +9,9 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 3s linear;
-    height: 190px;
-    width: 400px;
+    animation: App-logo-spin infinite 10s linear;
+    height: 220px; 
+    width: 440px;
   }
 }
 
