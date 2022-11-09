@@ -1,26 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
 import {Navbar} from './components/Navbar';
+import {Route, Routes} from 'react-router-dom';
+import {Products, Gallery, Contact, About, Details, Cart} from './pages/index';
+import Home from './pages/home';
+
 
 function App() {
-  return (
-    <div className="App">
-      <Navbar/>
 
-      <header className="App-header">
-        <img src="./dog5.png" className="App-logo" alt="logo" />
-        <p className="texto-big-index">
-            Website in construction. See you soon...
-        </p>
-        <a
-          className="App-link"
-          href="https://www.siruom.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Click to know about Siruom
-        </a>
-      </header>
+
+
+ 
+  return (
+
+    <div className="App">
+      
+      <Navbar/>
+       
+      <main>
+        <Routes>
+           <Route exact path = "products" element={<Products />} />
+           <Route exact path = "gallery" element={<Gallery />} />
+           <Route exact path = "about" element={<About/>} />
+           <Route exact path = "contact" element={<Contact />} />
+           <Route exact path = "home" element={<Home />} />
+           <Route exact path = "/" element={<Home />} />
+           <Route eaxct path = "/details/:pokemonId" element={<Details />}/>
+           <Route exact path = "cart" element={<Cart />} />
+        </Routes> 
+      </main>
     
    
     </div>
@@ -29,5 +36,7 @@ function App() {
     
   );
 }
+
+
 
 export default App;
