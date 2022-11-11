@@ -1,11 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom"; lo saque no se porque estaba 10/11
 import { Items } from "./Items";
 
 
 export const Navbar = () => {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate(); lo saque no se porque estaba 10/11
 
 
     return (

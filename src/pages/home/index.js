@@ -1,5 +1,7 @@
 import React from "react";
 import { useEffect, useState } from 'react';
+import '../../components/itemCount'
+import ItemCount from "../../components/itemCount";
 
 const Home = () => {
 
@@ -69,8 +71,9 @@ const Home = () => {
         <a className="App-link" href="https://www.siruom.com/" target="_blank" rel="noopener noreferrer">
           Click to know about Siruom
         </a> 
-
-       
+        
+         
+               
       </header>
 
         </div>

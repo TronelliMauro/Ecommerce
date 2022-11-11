@@ -1,7 +1,11 @@
 
 .Gallery{ 
-    background-color: #5e697f;
-    color: #5e697f;
-    font-size: 5px;
+    
+        background-color: rgb(50, 50, 117);
+        color: rgb(243, 238, 238);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
     
     }

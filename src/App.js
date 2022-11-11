@@ -3,10 +3,17 @@ import {Navbar} from './components/Navbar';
 import {Route, Routes} from 'react-router-dom';
 import {Products, Gallery, Contact, About, Details, Cart} from './pages/index';
 import Home from './pages/home';
+import { useState } from 'react';
+
 
 
 function App() {
 
+ const [buy, setBuy] = useState([]);
+
+ const AddProduct = (ItemBuy) => {
+  setBuy(ItemBuy)
+ }
 
 
  
@@ -24,9 +31,9 @@ function App() {
            <Route exact path = "contact" element={<Contact />} />
            <Route exact path = "home" element={<Home />} />
            <Route exact path = "/" element={<Home />} />
-           <Route eaxct path = "/details/:pokemonId" element={<Details />}/>
-           <Route exact path = "cart" element={<Cart />} />
-        </Routes> 
+           <Route exact path = "/details/:productId" element={<Details AddProduct={AddProduct} />}/>
+           <Route exact path = "cart" element={<Cart buy={buy} />} />
+         </Routes> 
       </main>
     
    

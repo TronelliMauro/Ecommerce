@@ -9,9 +9,31 @@ const Products = () => {
     const[isLoading, setIsLoading]= useState(false);
     
     const startPokemon= useRef(1);
-    const endPokemon= useRef(20);
+    const endPokemon= useRef(10); /* Estaba en 20 para los poke  */
 
-   const getPokemons = async(start = '1', end = '20') => {
+    const getPokemons = async(start = '1', end = '10') => {
+        try{
+            setIsLoading(true);
+            const promises = [];
+
+            for(let i = start; i <= end; i++){
+               promises.push(fetch(`https://fakestoreapi.com/products/${i}`).then(res => res.json()));
+            }
+            const results = await Promise.all(promises);
+            const newPokemons = results.map((products)=>{
+                
+                              
+                return {
+                    id: products.id,
+                    title: products.title,
+                    image: products.image,
+                    price: products.price, 
+                    category: products.category
+                }
+
+
+
+   /*const getPokemons = async(start = '1', end = '20') => {
         try{
             setIsLoading(true);
             const promises = [];
@@ -31,6 +53,7 @@ const Products = () => {
                     image,
                     type: types, 
                 }
+*/
 
             });
             setPokemons(newPokemons);
@@ -49,6 +72,24 @@ const Products = () => {
    console.log('pokemons',pokemons);
 
    const handleNext= async() => {
+    startPokemon.current+=10;
+    endPokemon.current+=10;
+    getPokemons(startPokemon.current, endPokemon.current);
+   }
+
+   const handlePrev= async() => {
+    startPokemon.current-=10;
+    endPokemon.current-=10;
+    getPokemons(startPokemon.current, endPokemon.current);
+   }
+
+  /* useEffect(()=>{
+    getPokemons(startPokemon.current, endPokemon.current);
+   },[]);
+
+   console.log('pokemons',pokemons);
+
+   const handleNext= async() => {
     startPokemon.current+=20;
     endPokemon.current+=20;
     getPokemons(startPokemon.current, endPokemon.current);
@@ -59,10 +100,9 @@ const Products = () => {
     endPokemon.current-=20;
     getPokemons(startPokemon.current, endPokemon.current);
    }
-
+*/
 
  
-
    
     return (
         <div className='container'>
@@ -79,7 +119,7 @@ const Products = () => {
                  </div>
                  <div className="button-container">
                         <button disabled={startPokemon.current <= 1 || isLoading} onClick={handlePrev}>Previous</button>
-                        <button disabled={startPokemon.current >= 300 || isLoading}  onClick={handleNext}>Next</button>
+                        <button disabled={startPokemon.current >= 10 || isLoading}  onClick={handleNext}>Next</button> {/*Iba 300 en la lista de poke*/}
                  </div>
                  </>
             )}

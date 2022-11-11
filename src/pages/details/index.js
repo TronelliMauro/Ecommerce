@@ -1,17 +1,19 @@
 import React from "react";
 import { useParams, useLocation } from "react-router-dom";
-import './styles.css'; 
-import Card from "../../components/card";
+import './styles.css';
+import CardBuy from "../../components/CardBuy";
 
-const Details = () =>{
+
+
+const Details = ({AddProduct}) =>{
     const params = useParams();
     const {state} = useLocation();
 
     console.warn('params', params, 'state', state);
-return(
+
+    return(
     <div>
-        Details
-        {/* <Card item={state}/> */}
+         <CardBuy AddProduct={AddProduct} item={state}/> 
     </div>
 )
 
