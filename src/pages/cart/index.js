@@ -1,9 +1,9 @@
 import React from "react";
-/*import './gallery.css';*/
+import './style.css';
 
 const Cart = ({buy}) => {
     return (
-        <div>
+        <div className="Cart">
             <h1>Bienvenidos al carrito</h1>
              {buy}
         </div>

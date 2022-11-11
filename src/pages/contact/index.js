@@ -1,9 +1,9 @@
 import React from "react";
-/*import './gallery.css';*/
+import './style.css';
 
 const Contact = () => {
     return (
-        <div>
+        <div className='Contact'>
             <h1>Hola, escribinos</h1>
         </div>
     )
