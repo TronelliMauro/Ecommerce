@@ -1,0 +1,18 @@
+
+.spinner{
+    width: 70px;
+    height: 70px;
+    border: 10px solid;
+    border-radius: 50%;
+    border-color: rgb(58, 58, 137) transparent rgb(58, 58, 137) transparent;
+    animation: spin-animation 1s linear;
+}
+
+@keyframes spin-animation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

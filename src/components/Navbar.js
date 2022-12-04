@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../context/cart.context";
 // import { useNavigate } from "react-router-dom"; lo saque no se porque estaba 10/11
 import { Items } from "./Items";
 
 
-export const Navbar = () => {
+export const Navbar = ({numberOfItems = 0, onHandlerCart}) => {
+
+ const {cartTotal} = useContext(CartContext);
 
     // const navigate = useNavigate(); lo saque no se porque estaba 10/11
+   
 
-
+    
     return (
         <nav className= 'navbar'>
 
@@ -26,11 +30,12 @@ export const Navbar = () => {
 
         </ul>
 
-        <ul>
-        <input className='barsearch' placeholder="type to search" type='text'></input>
-        <button className='button1'> Search </button>
-        </ul>
-
+        <div onClick={onHandlerCart} className="header-menu-cart">
+            <img className="header-menu-cart-image" src='./carticon.png' alt="cart-icon"></img>
+            <div className="header-menu-cart-number-container">
+                <span className="header-menu-cart-number">{cartTotal}</span>
+            </div>
+        </div>
 
         </nav>
     )

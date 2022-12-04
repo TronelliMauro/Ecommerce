@@ -6,16 +6,16 @@
     align-items: center;
     height: fit-content;
     margin: 10px;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     transition: all 200ms ease;
 }
 
 .card:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(244, 240, 234, 0.807);
 }
 
 .card.image.container{
@@ -25,8 +25,8 @@
 }
 
 .card-image{
-    width: 120px;
-    height: 120px;
+    width: 250px;
+    height: 180px;
 
 }
 
@@ -41,22 +41,29 @@
 .card-name{
     font-size: 15px;
     width: 260px;
-    height: 65px;
+    height: 30px;
     font-weight: bold;
     color: #212121;
 
 }
 
 .card-category{
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
-    color: #212121;
+    color: #c9c7c7;
+ }
 
+.card-stock{
+    font-size: 12px;
+    font-weight: lighter;
+    color: #4c4b4b;
+    padding: 0px, 0px, 10px, 0px;
 }
 
 .card-type{
-    font-size: 18px;
+    font-size: 20px;
     color: #212121;
+    font-weight: bold;
 }
 
 .card.id{
@@ -70,3 +77,94 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(37, 37, 116);
 }
+
+
+/* .add-cart-button {
+    width: 70px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    font-size: 12px;
+    margin-top: 5px;
+  } */
+
+  /* .add-cart-button:hover{
+    background-color: rgb(185, 175, 175);
+    color: #0e0e0e;
+    transition: all 0.3s ease-in-out;
+  } */
+
+  .card-button-minus {
+    width: 22px;
+    height: 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    font-size: 12px;
+    margin-right: 4px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .card-button-minus:hover{
+    background-color: rgb(185, 175, 175);
+    color: #0e0e0e;
+  }
+
+  .card-button-plus {
+    width: 22px;
+    height: 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    font-size: 12px;
+    margin-left: 4px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .card-button-plus:hover{
+    background-color: rgb(185, 175, 175);
+    color: #0e0e0e;
+  }
+
+  .card-input {
+    width: 40px;
+    height: 25px;
+    
+    
+  }
+  
+  input{
+    text-align: center;
+}
+
+.card-button-minus:disabled{
+  width: 22px;
+  height: 22px;
+  border: none;
+  cursor: not-allowed;
+  border-radius: 5px;
+  background-color: rgb(163, 156, 156);
+  color: white;
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+.card-button-plus:disabled{
+  width: 22px;
+  height: 22px;
+  border: none;
+  cursor: not-allowed;
+  border-radius: 5px;
+  background-color: rgb(163, 156, 156);
+  color: white;
+  font-size: 12px;
+  margin-right: 4px;
+   
+} 

@@ -1,0 +1,29 @@
+
+
+.filter-menu-item {
+    display: flex;
+    flex: 1; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+.button-filter-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+    height: 2rem;
+    background-color: #52528C;
+    border: 2px solid #372554;
+    color: #d4d4df;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-filter-menu:hover{
+    background-color:#372554;
+    border: 2px solid #52528C; 
+    cursor: pointer;
+}

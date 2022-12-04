@@ -1,5 +1,6 @@
 .container{
-    background-color: rgb(225, 225, 233);
+    /* background-color: rgb(225, 225, 233); */
+    background-color: rgb(48, 48, 69);
     color: rgb(27, 26, 26);
     display: flex;
     flex-direction: column;
@@ -11,11 +12,13 @@
 .title{
     font-size: 22px;
     font-weight: bold;
-    color: rgb(51, 48, 48);
+    color: rgb(204, 208, 211);
+    padding: 30px;
 }
 
 .list-container{
-    background-color:  rgb(225, 225, 233);
+    /* background-color:  rgb(225, 225, 233); */
+    background-color: rgb(48, 48, 69);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -33,10 +36,12 @@
 .button{
     display: flex;
     background-color: rgb(225, 225, 233);
+    /* width: 30px;
+    height: 20px; */
     border: px solid #212121;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px, 10px, 10px, 10px;
+    margin: 10px, 10px, 100px, 10px;
     font-size: 14px;
     font-weight: bold;
     color: #212121;
@@ -53,4 +58,58 @@
     color: #fff;
     cursor: not-allowed;
 }
+
+.input{
+    width: 30%;
+    border: 1px solid #212121;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    /* justify-content: left; */
+    font-size: 14px;
+    font-weight: bold;
+    }
+
+.input:focus{
+    outline: none;
+    }
+
+.input::placeholder{
+    color: #cccccc;
+}
+
+.filter-menu-container{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    padding-bottom: 3rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.add-cart-button {
+    width: 95px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+
+.add-cart-button:hover{
+    border-radius: 5px;
+    background-color: rgb(185, 175, 175);
+    color: #0e0e0e;
+    transition: all 0.3s ease-in-out;
+ }
+
+  .button-add-container{
+   display: flex;
+  }
+
+
 
