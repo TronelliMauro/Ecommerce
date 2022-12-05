@@ -39,6 +39,35 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Code Resume ##
+
+In the following code you can find inside the SRC folder different parts that compose this project. 
+
+Starting with the components folder where you can see the components created for the different sections of our site. Here you can find among others the components of:
+- "navbar", our top navigation bar.
+- "card", where we show the elements of our shop.
+- "card-item", where we show the items added to the cart.
+- "sidebar", sidebar containing the items added to the cart and the option to buy.
+- "spinner", loading spiner graphic for the waiting rendering of the products.
+- "Slideshow", component of visualization of images in carousel. 
+
+Another of the parts that we can find has to do with a context made to be able to access the information of the cart in different parts of our project.
+
+Inside the folder "pages" we will find the different sections of our page on which we will be able to navigate through our top navigation bar. Here we will find:
+The "Home" where we can access the start of the project that shows us a pre-sale of a product and link to access the landing page of the same.
+-We will also find the "products" option where we can see the available products, filter them by categories and select the items to add to the cart, taking into account the stock of the same. Once added to the cart we can access it from the top right of the navigation bar to finalize the purchase. 
+-In the section about us, we tell you about the company and an institutional video is presented. 
+-In Gallery, we will be able to observe a carousel of photos of the company.
+-Finally in contacts we will see the information of the company. 
+
+In the App.js, we can see the navigation paths between the different sections of the project and the rendering of the "Sidebar", which must be able to be used while positioned in any of the sections.
+
+Finally in our index.js we will be able to see the wrapper of our CartProvider to App to access its information in a global way.
+
+## ################ ##
+
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).

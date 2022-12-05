@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect, useCallback, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import './products.css';
 import Card from "../../components/card";
 import Spinner from "../../components/spinner";
 
-//import { CartProvider } from './context/cart.context';
 
-import { getFirestore, query, where, getDocs, collection, addDoc } from "firebase/firestore";
+
+import { getFirestore, query, where, getDocs, collection } from "firebase/firestore";
 import { FilterMenuItem } from "../../components";
 
 import { CartContext } from "../../context/cart.context";
@@ -13,16 +13,12 @@ import { CartContext } from "../../context/cart.context";
 
 const Products = () => {
 
-    const { cart , setCart, onHandlerOrder } = useContext(CartContext);
-    /*firebase implementacion collection*/
+    const { cart, setCart } = useContext(CartContext);
     const [allProducts, setAllProducts] = useState(null);
     const [allCategories, setAllCategories] = useState(null);
     const [isFiltering, setIsFiltering] = useState(false);
     const [filteredProducts, setFilteredProducts] = useState(null);
-    // const [cart, setCart] = useState([]);
-    const [cartId, setCartId] = useState(null);
-
-
+   
     useEffect(() => {
         const db = getFirestore();
         const getProductsCollection = collection(db, 'products-edites');
@@ -45,7 +41,7 @@ const Products = () => {
     }, []);
 
     console.log('allProducts', allProducts)
-    
+
 
     const onFilter = (categoryId) => {
         console.log('categoryId', categoryId);
@@ -144,22 +140,8 @@ const Products = () => {
         }
     };
 
-    // const cartTotal = cart?.reduce((acc, item) => {
-    //     return acc + item.price * item.quantity;
-    // }, 0);
-
-    // const saveMidleCart = () =>{
-    //     saveCart(cart);
-    // }
-
-  
-
-
-
-
-
     return (
-        
+
         <div className='container'>
             <h1 className='title'>Products List</h1>
             <div className="filter-menu-container">
@@ -171,9 +153,9 @@ const Products = () => {
             <div className="list-container">
                 {renderProducts()}
             </div>
-            
+
         </div>
-        
+
     );
 }
 

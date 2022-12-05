@@ -1,10 +1,9 @@
-import React, { memo } from "react";
-import { useNavigate } from "react-router-dom";
+import React  from "react";
 import './styles.css';
 
 
 const Card = ({ product, decreaseQuantity, increaseQuantity, numberOfItem }) => {
-    const { name, category, id, image, description, price, stock } = product || {};
+    const { name, category, id, image, price, stock } = product || {};
 
 
 
@@ -24,7 +23,7 @@ const Card = ({ product, decreaseQuantity, increaseQuantity, numberOfItem }) => 
             <div className="card-button-container">
                 <button disabled={numberOfItem === 0} className="card-button-minus" onClick={() => decreaseQuantity(id)}>-</button>
                 <input disabled className="card-input" type="number" value={numberOfItem}></input>
-                <button disabled={numberOfItem == stock} className="card-button-plus" onClick={() => increaseQuantity(id)}>+</button>
+                <button disabled={numberOfItem === stock} className="card-button-plus" onClick={() => increaseQuantity(id)}>+</button>
             </div>
 
         </div>

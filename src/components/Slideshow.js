@@ -1,21 +1,21 @@
-import React, {useRef, useEffect, useCallback} from 'react';
-import {ReactComponent as FlechaIzquierda} from './../img/iconmonstr-angel-left-thin.svg';
-import {ReactComponent as FlechaDerecha} from './../img/iconmonstr-angel-right-thin.svg';
+import React, { useRef, useEffect, useCallback } from 'react';
+import { ReactComponent as FlechaIzquierda } from './../img/iconmonstr-angel-left-thin.svg';
+import { ReactComponent as FlechaDerecha } from './../img/iconmonstr-angel-right-thin.svg';
 import styled from 'styled-components';
 
 const Slideshow = ({
-		children,
-		controles = false,
-		autoplay = false,
-		velocidad="500",
-		intervalo="5000"
-	}) => {
+	children,
+	controles = false,
+	autoplay = false,
+	velocidad = "500",
+	intervalo = "5000"
+}) => {
 	const slideshow = useRef(null);
 	const intervaloSlideshow = useRef(null);
 
 	const siguiente = useCallback(() => {
 		// Comprobamos que el slideshow tenga elementos
-		if(slideshow.current.children.length > 0){
+		if (slideshow.current.children.length > 0) {
 			console.log('Siguiente')
 
 			// Obtenemos el primer elemento del slideshow.
@@ -45,19 +45,19 @@ const Slideshow = ({
 
 		}
 	}, [velocidad]);
-	
+
 	const anterior = () => {
 		console.log('Anterior');
-		if(slideshow.current.children.length > 0){
+		if (slideshow.current.children.length > 0) {
 			// Obtenemos el ultimo elemento del slideshow.
 			const index = slideshow.current.children.length - 1;
 			const ultimoElemento = slideshow.current.children[index];
 			slideshow.current.insertBefore(ultimoElemento, slideshow.current.firstChild);
-			
+
 			slideshow.current.style.transition = 'none';
 			const tamañoSlide = slideshow.current.children[0].offsetWidth;
 			slideshow.current.style.transform = `translateX(-${tamañoSlide}px)`;
-		
+
 			setTimeout(() => {
 				slideshow.current.style.transition = `${velocidad}ms ease-out all`;
 				slideshow.current.style.transform = `translateX(0)`;
@@ -66,16 +66,16 @@ const Slideshow = ({
 	}
 
 	useEffect(() => {
-		if(autoplay){
+		if (autoplay) {
 			intervaloSlideshow.current = setInterval(() => {
 				siguiente();
 			}, intervalo);
-	
+
 			// Eliminamos los intervalos
 			slideshow.current.addEventListener('mouseenter', () => {
 				clearInterval(intervaloSlideshow.current);
 			});
-	
+
 			// Volvemos a poner el intervalo cuando saquen el cursor del slideshow
 			slideshow.current.addEventListener('mouseleave', () => {
 				intervaloSlideshow.current = setInterval(() => {
@@ -169,5 +169,5 @@ const Boton = styled.button`
 	}
 	${props => props.derecho ? 'right: 0' : 'left: 0'}
 `;
- 
-export {Slideshow, Slide, TextoSlide};
+
+export { Slideshow, Slide, TextoSlide };

@@ -1,13 +1,12 @@
-.Contact{ 
-    
+.Contact {
+
     background-color: rgb(48, 48, 69);
-    /* color: rgb(243, 238, 238); */
     color: rgb(21, 19, 19);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-content: center;
-    
+
 }
 
 .photo-backg {
@@ -16,16 +15,15 @@
     border-color: #000000;
     position: relative;
     background-repeat: no-repeat;
-    background-size:contain;
- 
+    background-size: contain;
+
 }
 
-.text-container{
+.text-container {
     width: 400px;
     height: 230px;
     position: absolute;
-    /* background-color: rgb(56, 35, 58); */
-    background-color: rgba(28, 23, 28, 0.934); 
+    background-color: rgba(28, 23, 28, 0.934);
     border-color: #000000;
     border-radius: 5%;
     border-width: 15px;
@@ -35,15 +33,13 @@
     -ms-transform: translate(-50%, -50%);
 }
 
-.text-contact{
- font-size: 22px;
- color: aliceblue;
- margin: 35px;
- /* font-family: 'Exo 2', sans-serif;
-font-family: 'Fredoka One', cursive; */
+.text-contact {
+    font-size: 22px;
+    color: aliceblue;
+    margin: 35px;
 }
 
-.text-contact-sub{
+.text-contact-sub {
     font-size: 16px;
     color: rgb(201, 211, 219);
 }

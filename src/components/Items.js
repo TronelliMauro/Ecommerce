@@ -3,17 +3,17 @@ import { useNavigate } from "react-router-dom";
 
 
 
-export const Items = ({name, url}) => {
+export const Items = ({ name, url }) => {
 
-const navigate = useNavigate();
-    
-const goPage=() =>{
-    navigate(url);
-}
+    const navigate = useNavigate();
 
-return (
+    const goPage = () => {
+        navigate(url);
+    }
 
-       <div onClick={goPage} className= 'items'> {name}  </div>
+    return (
+
+        <div onClick={goPage} className='items'> {name}  </div>
     )
 
 }

@@ -1,9 +1,6 @@
 import React from "react";
 import './gallery.css';
-
-//import Button from './Components/Button';
 import {Slideshow, Slide, TextoSlide} from '../../components/Slideshow';
-//import './estilos.css';
 import './gallery.css';
 import styled from 'styled-components';
 

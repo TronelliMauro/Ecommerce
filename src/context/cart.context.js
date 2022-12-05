@@ -9,8 +9,8 @@ export const CartContext = createContext(initialState);
 export const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]);
-    const [cartTotal, setCartTotal ] = useState(0);
-    
+    const [cartTotal, setCartTotal] = useState(0);
+
 
 
     const onHandlerOrder = () => {
@@ -32,19 +32,19 @@ export const CartProvider = ({ children }) => {
 
     const onRemoveItemCart = (id) => {
         setCart(currentCart => {
-          return currentCart.filter(item => item.id !== id);
+            return currentCart.filter(item => item.id !== id);
         });
-      }  
-    
+    }
+
     useEffect(() => {
         let total = 0;
-        cart.forEach((item) =>  total =  total + item.quantity);
+        cart.forEach((item) => total = total + item.quantity);
         setCartTotal(total);
-    },[cart])
+    }, [cart])
 
 
     return (
-        <CartContext.Provider value={{ cart, setCart, onHandlerOrder,  cartTotal, onRemoveItemCart  }}>
+        <CartContext.Provider value={{ cart, setCart, onHandlerOrder, cartTotal, onRemoveItemCart }}>
             {children}
 
         </CartContext.Provider>

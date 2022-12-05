@@ -5,17 +5,17 @@ import CardBuy from "../../components/CardBuy";
 
 
 
-const Details = ({AddProduct}) =>{
+const Details = ({ AddProduct }) => {
     const params = useParams();
-    const {state} = useLocation();
+    const { state } = useLocation();
 
     console.warn('params', params, 'state', state);
 
-    return(
-    <div>
-         <CardBuy AddProduct={AddProduct} item={state}/> 
-    </div>
-)
+    return (
+        <div>
+            <CardBuy AddProduct={AddProduct} item={state} />
+        </div>
+    )
 
 }
 
