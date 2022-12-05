@@ -79,24 +79,6 @@
 }
 
 
-/* .add-cart-button {
-    width: 70px;
-    height: 25px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    background-color: #555;
-    color: white;
-    font-size: 12px;
-    margin-top: 5px;
-  } */
-
-  /* .add-cart-button:hover{
-    background-color: rgb(185, 175, 175);
-    color: #0e0e0e;
-    transition: all 0.3s ease-in-out;
-  } */
-
   .card-button-minus {
     width: 22px;
     height: 22px;

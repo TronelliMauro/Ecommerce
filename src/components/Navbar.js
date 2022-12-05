@@ -26,7 +26,7 @@ export const Navbar = ({numberOfItems = 0, onHandlerCart}) => {
         <Items name='About Us' url='/about'/>
         <Items name='Gallery' url='/gallery'/>
         <Items name='Contact' url='/contact'/>
-        <Items name='Cart' url='/cart'/>
+        
 
         </ul>
 

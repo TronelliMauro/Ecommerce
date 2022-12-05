@@ -6,26 +6,8 @@ import {Slideshow, Slide, TextoSlide} from '../../components/Slideshow';
 //import './estilos.css';
 import './gallery.css';
 import styled from 'styled-components';
-import img1 from '../../img/3.jpg';
-import img2 from '../../img/2.jpg';
-import img3 from '../../img/4.jpg';
-import img4 from '../../img/5.jpg';
-import img5 from '../../img/G2.jpg';
-import img6 from '../../img/G3.jpg';
-import img7 from '../../img/G4.jpg';
-import img8 from '../../img/G5.jpg';
-import img9 from '../../img/G6.jpg';
-import img10 from '../../img/G7.jpg';
-import img11 from '../../img/G8.jpg';
-import img12 from '../../img/G10.jpg';
-import img13 from '../../img/G11.jpg';
-import img14 from '../../img/G14.jpg';
-import img15 from '../../img/G15.jpg';
-import img16 from '../../img/G20.jpg';
-import img17 from '../../img/G18.jpg';
-import img18 from '../../img/G19.jpg';
 
-//import img4 from './img/4.jpg';
+
 
  const Gallery = () => {
      return (
@@ -35,7 +17,7 @@ import img18 from '../../img/G19.jpg';
 			<Slideshow controles={true}>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img1} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/3.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -43,7 +25,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img2} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/2.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -51,7 +33,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img3} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/4.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -59,7 +41,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img4} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/5.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -67,7 +49,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
                 <Slide>
 					<a href="https://www.siruom.com">
-						<img src={img5} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G2.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -75,7 +57,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img6} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G3.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -83,7 +65,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img7} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G4.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -91,7 +73,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img8} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G5.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -99,7 +81,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img9} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G6.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -107,7 +89,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img10} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G7.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -115,7 +97,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img11} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G8.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -123,7 +105,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img12} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G10.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -131,7 +113,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img13} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G11.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -139,7 +121,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img14} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G14.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -147,7 +129,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img15} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G15.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -155,7 +137,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img16} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G20.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -163,7 +145,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img17} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G18.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>
@@ -171,7 +153,7 @@ import img18 from '../../img/G19.jpg';
 				</Slide>
 				<Slide>
 					<a href="https://www.siruom.com">
-						<img src={img18} alt=""/>
+						<img src={'https://lartek.com.ar/downloads/mauroimages/gallery/G19.jpg'} alt=""/>
 					</a>
 					<TextoSlide>
 						<p>Fotos Edites Solutions</p>

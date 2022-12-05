@@ -100,7 +100,7 @@ function App() {
               ))}  
               <div className='cart-footer'>
                 <div className='cart-footer-total'>
-                  <h3 className='cart-footer-total-title'>Total</h3>
+                  <h3 className='cart-footer-total-title'>Press the button to buy</h3>
                   {/* <h3 className='cart-footer-total-amout'>{cartTotal}</h3>  */}
                 </div>
                  <button 
@@ -128,7 +128,6 @@ function App() {
             <Route exact path="home" element={<Home />} />
             <Route exact path="/" element={<Home />} />
             <Route exact path="/details/:productId" element={<Details AddProduct={AddProduct} />} />
-            <Route exact path="cart" element={<Cart buy={buy} />} />
           </Routes>
         </main>
 

@@ -1,5 +1,5 @@
-import { createContext, useState, UseEffect, useEffect } from "react";
-import { addDoc, collection, connectFirestoreEmulator, Firestore, getFirestore } from "firebase/firestore";
+import { createContext, useState, useEffect } from "react";
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 
 const initialState = {
 }

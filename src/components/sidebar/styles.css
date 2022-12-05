@@ -6,7 +6,7 @@
     right: 0;
     width: 20vw;
     height: 100vh;
-    background-color: rgb(156, 111, 199);
+    background-color: rgb(46, 45, 47);
     padding: 2rem;
     z-index: 1;
     transition:  all 0.5s ease-in-out;
@@ -25,8 +25,8 @@
     cursor: pointer;
     background-color: transparent;
     border: none;
-    color: rgb(248, 61, 4);
-    font-size: 1.5rem;
+    color: rgb(237, 230, 228);
+    font-size: 1rem;
     font-weight: bold;
 
 }

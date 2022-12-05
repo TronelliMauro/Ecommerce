@@ -45,85 +45,7 @@ const Products = () => {
     }, []);
 
     console.log('allProducts', allProducts)
-    /*Fin firebase */
-
-    /*const [pokemons, setPokemons] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [filteredProducts, setFilteredProducts] = useState([]);
-
-    const startPokemon = useRef(1);
-    const endPokemon = useRef(10); /* Estaba en 20 para los poke  */
-
-    /* const getPokemons = async (start = '1', end = '10') => {
-        try {
-            setIsLoading(true);
-            const promises = [];
-
-            for (let i = start; i <= end; i++) {
-                promises.push(fetch(`https://fakestoreapi.com/products/${i}`).then(res => res.json()));
-            }
-            const results = await Promise.all(promises);
-            const newPokemons = results.map((products) => {
-
-
-                return {
-                    id: products.id,
-                    title: products.title,
-                    image: products.image,
-                    price: products.price,
-                    category: products.category
-                }
-
-
-
-            });
-            setPokemons(newPokemons);
-            setFilteredProducts(newPokemons);
-        } catch (error) {
-            console.log(error);
-        } finally {
-            setIsLoading(false);
-        }
-
-    }
-
-    useEffect(() => {
-        getPokemons(startPokemon.current, endPokemon.current);
-    }, []);
-
-    console.log('pokemons', pokemons);
-
-    const handleNext = async () => {
-        startPokemon.current += 10;
-        endPokemon.current += 10;
-        getPokemons(startPokemon.current, endPokemon.current);
-    }
-
-    const handlePrev = async () => {
-        startPokemon.current -= 10;
-        endPokemon.current -= 10;
-        getPokemons(startPokemon.current, endPokemon.current);
-    }
-
-    const debounce = (func, wait) => {
-        let timeout;
-
-        return function executedFuntion(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            }
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        }
-    }
-
-    const onHandleChange = useCallback(debounce((e) => {
-        const searchValue = e.target.value.toLowerCase();
-        const newProducts = pokemons.filter(pokemon => pokemon.title.toLowerCase().includes(searchValue.toLowerCase())); /* Porque es pokemon.tittle y no product.title*/
-
-    /*       setFilteredProducts(newProducts);
-       }, 500), [pokemons, setFilteredProducts]); */
+    
 
     const onFilter = (categoryId) => {
         console.log('categoryId', categoryId);
@@ -230,36 +152,16 @@ const Products = () => {
     //     saveCart(cart);
     // }
 
-    // console.log('cart', cart); //quitarr era para debbug
-
   
-
-    //  const saveCart = () => {
-    //      const myCart = {
-    //          user: {
-    //              name: 'Juan Perez',
-    //              email: 'eljuan@gmail.com'
-    //          },
-    //          items: cart, 
-    //          total:100,
-    //      }
-    //      const db = getFirestore();
-    //      const cartCollection = collection(db, 'cart');
-    //      addDoc(cartCollection, myCart)
-    //          .then((docRef) => {
-    //              setCartId(docRef.id);
-    //          })
-    //  }
 
 
 
 
 
     return (
-        // <CartProvider>
+        
         <div className='container'>
-            {/* <Sidebar isOpenCart={isOpenCart} onHandlerCart={onHandlerCart}></Sidebar> // iria este per al parecer necesito context para q funcione */}
-            <h1 className='title'>Lista de productos</h1>
+            <h1 className='title'>Products List</h1>
             <div className="filter-menu-container">
                 {allCategories && allCategories.map((category) => (
                     <FilterMenuItem key={category.id} {...category} onFilter={onFilter} />
@@ -271,7 +173,7 @@ const Products = () => {
             </div>
             
         </div>
-        // </CartProvider>
+        
     );
 }
 

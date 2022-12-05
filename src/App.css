@@ -322,8 +322,9 @@ body {
 }
 
 .cart-footer-total-title{
-  font-size: 1.2rem;
+  font-size: 0.6rem;
   color: #FFFFFF;
+  margin-bottom: 3px;
 }
 
 .cart-footer-total-amout{
@@ -333,10 +334,13 @@ body {
 }
 
 .button-create-order{
+
+  height: 30px;
+  width: 100px;
   background-color: #FFFFFF;
   border: none;
   border-radius: 5px;
-  padding: 0.8 rem;
+  margin: 5px 5px 5px 87px ;
   font-size: 0.8rem;
   color: #000000;
   cursor: pointer;
@@ -344,6 +348,14 @@ body {
 }
 
 .button-create-order:hover{
+  height: 30px;
+  width: 100px;
   background-color: #000000;
   color:#FFFFFF;
+}
+
+.cart-empty{
+  color: #e6dbdb;
+  padding: 1rem;
+  font-size: 1rem;
 }
